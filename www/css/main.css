@@ -348,7 +348,12 @@ footer {
 }
 
 .finder .header .field  {
-    margin-top: -4px;
+    width: 80%;    
+}
+
+.finder .header .field input {
+    font-size: 16px;
+    width: 80%;
 }
 
 .finder .header .field i{
