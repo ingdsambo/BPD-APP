@@ -104,7 +104,8 @@ nav .profile {
     color:  #A8A8A8;
 }
 
-.main .mainCard {
+.main .mainCard,
+.main .familyCard{
     background-color: #FFFFFF;
     padding: 16px;
     margin-bottom: 20px;
@@ -113,7 +114,9 @@ nav .profile {
 .main .mainCard .title,
 .main .mainCard .desc,
 .main .mainCard .media, 
-.main .mainCard .social {
+.main .mainCard .social
+.main .familyCard .dayCare .media,
+.main .familyCard .schoolBus .media{
     width: 100%;
     margin: 0 auto;
 }    
@@ -137,7 +140,9 @@ nav .profile {
     float: right;
 }
 
-.main .mainCard .desc {
+.main .mainCard .desc,
+.main .familyCard .dayCare .media,
+.main .familyCard .schoolBus .media{
     margin: 10px 0;
 }
 
@@ -219,16 +224,26 @@ section ul li a {
     top: 109px;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 25px;
     background-color: #FFFFFF;
     font-size: 20px;
     box-sizing: border-box;
     color: #333333;
     padding-top: 16px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.menu_column .content {
+    box-sizing: border-box;
 }
 
 .menu_column .menuItem {
     margin-left: 20px;
+}
+
+.menu_column .menuItemList {
+    clear: both;
 }
 
 .menu_column .title {
@@ -247,9 +262,6 @@ section ul li a {
 .menu_column ul li {
     padding-bottom: 15px;
     box-sizing: border-box;
-    height: 50px;
-    line-height: 50px;
-
 }
 
 .menu_column ul li:hover {
@@ -258,9 +270,16 @@ section ul li a {
 
 .menu_column .statusIcon {
     float: right;
-    height: 50px;
     box-sizing: border-box;
-    padding-top: 15px;
+}
+
+.menu_column .menuItemSub {
+
+}
+
+.menu_column .menuItemSub ul {
+    margin: 15px 0 0 42px;
+    padding: 0;
 }
 
 footer {
@@ -269,4 +288,114 @@ footer {
     bottom: 0;
     width: 100%;
     height: 25px;
+}
+
+.main .familyCard{
+}
+
+.main .familyCard .dayCare .title{
+    font-size: 14px;
+    color: #3399CC;
+}
+
+.main .familyCard .dayCare .content,
+.main .familyCard .schoolBus .content{
+    font-size: 10px;
+    color: #333333;
+}
+
+.main .familyCard .schoolBus .title{
+    font-size: 14px;
+    color: #FF9900;
+}
+
+.main .familyCard .dayCare .media img,
+.main .familyCard .schoolBus .media img{
+    width: 100%;
+}
+
+.finder,
+.emergencyContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #E8E8E8;
+    z-index: 999;
+}
+
+.finder .header,
+.emergencyContainer .header {
+    width: 100%;
+    height: 64px;
+    background-color: #003B7A;
+    border-bottom: solid 8px #FF9900;
+    color: #FFFFFF;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.finder .header div,
+.emergencyContainer .header div{
+    float: left;
+    font-size: 20px;
+}
+
+.finder .header .back,
+.emergencyContainer .header .back {
+    margin-right: 20px;
+}
+
+.finder .header .field  {
+    margin-top: -4px;
+}
+
+.finder .header .field i{
+    margin-right: 10px;
+}
+
+.finder .anunTitle {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+    font-family: Verdana;
+    color: #999999;
+}
+
+.emergencyContainer .emergencyContent{
+    padding: 16px;
+}
+
+.emergencyContainer .btn911 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.emergencyContainer .btn911 img{
+    width: 96%;
+    box-shadow: 5px 5px 5px #CCC;
+}
+
+.emergencyContainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.emergencyContainer ul li {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 3%;
+
+}
+
+.emergencyContainer .emergencyBtn {
+    text-align: center;
+}
+
+.emergencyContainer .emergencyBtn img {
+    width: 153px;
+    box-shadow: 5px 5px 5px #CCC;
 }
