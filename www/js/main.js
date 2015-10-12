@@ -1,5 +1,5 @@
 // Creación del módulo
-var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute', 'ngMaterial','ngAnimate']);
+var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute', 'ngMaterial', 'ngAnimate']);
 
 
 // Configuración de las rutas
@@ -47,7 +47,6 @@ angularRoutingApp.controller('mainController', function ($scope, Template, $loca
     $scope.template.house = "ng-hide";
     $scope.template.vehicle = "ng-hide";
     $scope.template.others = "ng-hide";
-    $scope.template.menuStatus = initialStatus;
     $scope.template.subMenuSP = initialStatus;
     $scope.template.smFamiliar = initialStatus;
     $scope.template.smSalud = initialStatus;
@@ -55,14 +54,11 @@ angularRoutingApp.controller('mainController', function ($scope, Template, $loca
     $scope.template.smVehiculo = initialStatus;
     $scope.template.smOtros = initialStatus;
     $scope.template.smAutoGestion = initialStatus;
-    $scope.template.finder = initialStatus;
-    $scope.template.emergency = initialStatus;
-    $scope.template.notify = initialStatus;
+    $scope.template.menuStatus = false;
+    $scope.template.finder = false;
+    $scope.template.emergency = false;
+    $scope.template.notify = false;
     //</editor-fold>
-
-    $scope.onSwipeLeft = function (ev) {
-        alert("algo");
-    };
 
     $scope.toggleMenu = function (value) {
         if (!value) {
@@ -166,7 +162,7 @@ angularRoutingApp.controller('mainController', function ($scope, Template, $loca
     $scope.template.emergencyStatus = function (value) {
         $scope.template.emergency = value;
     };
-    
+
     $scope.template.notifyStatus = function (value) {
         $scope.template.notify = value;
     };
@@ -189,10 +185,10 @@ angularRoutingApp.controller('notifyController', function ($scope, Template) {
     $scope.template.house = initialStatus;
     $scope.template.vehicle = initialStatus;
     $scope.template.others = initialStatus;
-    $scope.template.menuStatus = initialStatus;
-    $scope.template.finder = initialStatus;
-    $scope.template.emergency = initialStatus;
-    $scope.template.notify = initialStatus;
+    $scope.template.menuStatus = false;
+    $scope.template.finder = false;
+    $scope.template.emergency = false;
+    $scope.template.notify = false;
     //</editor-fold>
 });
 
@@ -209,9 +205,9 @@ angularRoutingApp.controller('familyController', function ($scope, Template) {
     $scope.template.house = initialStatus;
     $scope.template.vehicle = initialStatus;
     $scope.template.others = initialStatus;
-    $scope.template.menuStatus = initialStatus;
-    $scope.template.finder = initialStatus;
-    $scope.template.emergency = initialStatus;
-    $scope.template.notify = initialStatus;
+    $scope.template.menuStatus = false;
+    $scope.template.finder = false;
+    $scope.template.emergency = false;
+    $scope.template.notify = false;
     //</editor-fold>
 });
