@@ -1,5 +1,5 @@
 // Creación del módulo
-var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute']);
+var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute', 'ngMaterial']);
 
 
 // Configuración de las rutas
@@ -35,16 +35,18 @@ angularRoutingApp.service("Template", function () {
     return {};
 });
 
-angularRoutingApp.controller('mainController', function ($scope, Template) {
+angularRoutingApp.controller('mainController', function ($scope, Template, $location) {
     var initialStatus = "ng-hide";
 
     //<editor-fold defaultstate="collapsed" desc="Template">
     $scope.template = Template;
     $scope.template.title = "Inicio";
-    $scope.template.main = "selected";
-    $scope.template.notify = "";
-    $scope.template.popular = "";
-    $scope.template.profile = "";
+    $scope.template.main = "ng-show";
+    $scope.template.family = "ng-hide";
+    $scope.template.health = "ng-hide";
+    $scope.template.house = "ng-hide";
+    $scope.template.vehicle = "ng-hide";
+    $scope.template.others = "ng-hide";
     $scope.template.menuStatus = initialStatus;
     $scope.template.subMenuSP = initialStatus;
     $scope.template.smFamiliar = initialStatus;
@@ -56,6 +58,10 @@ angularRoutingApp.controller('mainController', function ($scope, Template) {
     $scope.template.finder = initialStatus;
     $scope.template.emergency = initialStatus;
     //</editor-fold>
+
+    $scope.onSwipeLeft = function (ev) {
+        alert("algo");
+    };
 
     $scope.toggleMenu = function (value) {
         if (!value) {
@@ -159,52 +165,46 @@ angularRoutingApp.controller('mainController', function ($scope, Template) {
     $scope.template.emergencyStatus = function (value) {
         $scope.template.emergency = value;
     };
+
+    $scope.template.goTo = function (value) {
+        $scope.template.menuStatus = initialStatus;
+        $location.url(value);
+    };
 });
 
 angularRoutingApp.controller('notifyController', function ($scope, Template) {
     //<editor-fold defaultstate="collapsed" desc="Template">
+    var initialStatus = 'ng-hide';
+
     $scope.template = Template;
     $scope.template.title = "Notificaciones";
-    $scope.template.main = "";
-    $scope.template.notify = "selected";
-    $scope.template.popular = "";
-    $scope.template.profile = "";
-    $scope.template.menuStatus = 'ng-hide';
-    //</editor-fold>
-});
-
-angularRoutingApp.controller('popularController', function ($scope, Template) {
-    //<editor-fold defaultstate="collapsed" desc="Template">
-    $scope.template = Template;
-    $scope.template.title = "Populares";
-    $scope.template.main = "";
-    $scope.template.notify = "";
-    $scope.template.popular = "selected";
-    $scope.template.profile = "";
-    $scope.template.menuStatus = 'ng-hide';
-    //</editor-fold>
-});
-
-angularRoutingApp.controller('profileController', function ($scope, Template) {
-    //<editor-fold defaultstate="collapsed" desc="Template">
-    $scope.template = Template;
-    $scope.template.title = "Perfil";
-    $scope.template.main = "";
-    $scope.template.notify = "";
-    $scope.template.popular = "";
-    $scope.template.profile = "selected";
-    $scope.template.menuStatus = 'ng-hide';
+    $scope.template.main = "ng-show";
+    $scope.template.family = initialStatus;
+    $scope.template.health = initialStatus;
+    $scope.template.house = initialStatus;
+    $scope.template.vehicle = initialStatus;
+    $scope.template.others = initialStatus;
+    $scope.template.menuStatus = initialStatus;
+    $scope.template.finder = initialStatus;
+    $scope.template.emergency = initialStatus;
     //</editor-fold>
 });
 
 angularRoutingApp.controller('familyController', function ($scope, Template) {
     //<editor-fold defaultstate="collapsed" desc="Template">
+
+    var initialStatus = 'ng-hide';
+
     $scope.template = Template;
     $scope.template.title = "Familia";
-    $scope.template.main = "";
-    $scope.template.notify = "";
-    $scope.template.popular = "";
-    $scope.template.profile = "";
-    $scope.template.menuStatus = 'ng-hide';
+    $scope.template.main = initialStatus;
+    $scope.template.family = "ng-show";
+    $scope.template.health = initialStatus;
+    $scope.template.house = initialStatus;
+    $scope.template.vehicle = initialStatus;
+    $scope.template.others = initialStatus;
+    $scope.template.menuStatus = initialStatus;
+    $scope.template.finder = initialStatus;
+    $scope.template.emergency = initialStatus;
     //</editor-fold>
 });

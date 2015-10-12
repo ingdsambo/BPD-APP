@@ -246,6 +246,10 @@ section ul li a {
     clear: both;
 }
 
+.menu_column .menuItemList a {
+    display: block;
+}
+
 .menu_column .title {
     margin: 15px 0 15px 0;
     padding: 15px 16px 0 16px;
@@ -260,7 +264,7 @@ section ul li a {
 }
 
 .menu_column ul li {
-    padding-bottom: 15px;
+    margin-bottom: 15px;
     box-sizing: border-box;
 }
 
@@ -351,13 +355,16 @@ footer {
     width: 80%;    
 }
 
-.finder .header .field input {
+.finder .header .field .mdField {
     font-size: 16px;
-    width: 80%;
+    color: #FFFFFF;
+    display: inline-block;
+
 }
 
 .finder .header .field i{
     margin-right: 10px;
+    display: inline-block;
 }
 
 .finder .anunTitle {
