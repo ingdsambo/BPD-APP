@@ -1,40 +1,38 @@
 <div class="content">
     <div class="main">
         <ul>
-            <li>
-                <a href="#home">
-                    <i class="fa fa-home"></i><span class="menuItem">Inicio</span> <span class="statusIcon {{template.main}}"><i class="fa fa-check-circle-o"></i></span>
-                </a>
+            <li ng-click="template.goTo('home')">
+                <i class="mdi mdi-home-variant"></i><span class="menuItem">Inicio</span> <span class="statusIcon {{template.main}}"><i class="mdi mdi-check"></i></span>
             </li>
             <li>
                 <div class="menuItemList" ng-click="activateSubMenu('', 'personal')">
-                    <i class="fa fa-user-plus"></i><span class="menuItem">Servios Personales</span> <span class="statusIcon"><i class="fa fa-chevron-down"></i></span>
+                    <i class="mdi mdi-account-plus"></i><span class="menuItem">Servios Personales</span> <span class="statusIcon"><i class="mdi mdi-menu-down"></i></span>
                 </div>                                
                 <div class="menuItemSub {{template.subMenuSP}}">
                     <ul>
                         <li ng-click="template.goTo('servicios/familia')">
                             <div class="menuItemList">
-                                <span class="menuItem">Familiar</span> <span class="statusIcon {{template.family}}"><i class="fa fa-check-circle-o"></i></span>
+                                <span class="menuItem">Familiar</span> <span class="statusIcon {{template.family}}"><i class="mdi mdi-check"></i></span>
                             </div>
                         </li>
                         <li ng-click="template.goTo('servicios/familia')">
                             <div class="menuItemList">
-                                <span class="menuItem">Salud</span> <span class="statusIcon {{template.health}}"><i class="fa fa-check-circle-o"></i></span>
+                                <span class="menuItem">Salud</span> <span class="statusIcon {{template.health}}"><i class="mdi mdi-check"></i></span>
                             </div>
                         </li>
                         <li ng-click="template.goTo('servicios/familia')">
                             <div class="menuItemList">
-                                <span class="menuItem">Hogar</span> <span class="statusIcon {{template.house}}"><i class="fa fa-check-circle-o"></i></span>
+                                <span class="menuItem">Hogar</span> <span class="statusIcon {{template.house}}"><i class="mdi mdi-check"></i></span>
                             </div>
                         </li>
                         <li ng-click="template.goTo('servicios/familia')">
                             <div class="menuItemList">
-                                <span class="menuItem">Vehículo</span> <span class="statusIcon {{template.vehicle}}"><i class="fa fa-check-circle-o"></i></span>
+                                <span class="menuItem">Vehículo</span> <span class="statusIcon {{template.vehicle}}"><i class="mdi mdi-check"></i></span>
                             </div>
                         </li>
                         <li ng-click="template.goTo('servicios/familia')">
                             <div class="menuItemList">
-                                <span class="menuItem">Otros</span> <span class="statusIcon {{template.others}}"><i class="fa fa-check-circle-o"></i></span>
+                                <span class="menuItem">Otros</span> <span class="statusIcon {{template.others}}"><i class="mdi mdi-check"></i></span>
                             </div>
                         </li>
                     </ul>
@@ -42,7 +40,7 @@
             </li>
             <li>
                 <div class="menuItemList" ng-click="activateSubMenu('', 'autogestion')">
-                    <i class="fa fa-magic"></i><span class="menuItem">Auto Gestión</span><span class="statusIcon"><i class="fa fa-chevron-down"></i></span>
+                    <i class="mdi mdi-auto-fix"></i><span class="menuItem">Auto Gestión</span><span class="statusIcon"><i class="mdi mdi-menu-down"></i></span>
                 </div>
                 <div class="menuItemSub {{template.smAutoGestion}}">
                     <ul>
@@ -54,23 +52,23 @@
                     </ul>
                 </div>
             </li>
-            <li><i class="fa fa-building"></i><span class="menuItem">Oficina Virtual</span></li>
-            <li><i class="fa fa-share-alt"></i><span class="menuItem">Social BPD</span></li>
+            <li><i class="mdi mdi-home-modern"></i><span class="menuItem">Oficina Virtual</span></li>
+            <li><i class="mdi mdi-share-variant"></i><span class="menuItem">Social BPD</span></li>
         </ul>
     </div>
 
     <div class="news">
         <div class="title">Recientes</div>
         <ul>
-            <li><i class="fa fa-user-plus"></i><span class="menuItem">Servios Personales</span></li>
-            <li><i class="fa fa-user-plus"></i><span class="menuItem">Servios Personales</span></li>
+            <li><i class="mdi mdi-account-plus"></i><span class="menuItem">Servios Personales</span></li>
+            <li><i class="mdi mdi-account-plus"></i><span class="menuItem">Servios Personales</span></li>
         </ul>  
     </div>
 
     <div class="explore">
         <div class="title">Lo Nuevo</div>
         <ul>
-            <li><i class="fa fa-fire"></i> <span class="menuItem">Lo más reciente</span></li>
+            <li><i class="mdi mdi-fire"></i> <span class="menuItem">Lo más reciente</span></li>
         </ul> 
     </div>
 </div>

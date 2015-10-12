@@ -57,6 +57,7 @@ angularRoutingApp.controller('mainController', function ($scope, Template, $loca
     $scope.template.smAutoGestion = initialStatus;
     $scope.template.finder = initialStatus;
     $scope.template.emergency = initialStatus;
+    $scope.template.notify = initialStatus;
     //</editor-fold>
 
     $scope.onSwipeLeft = function (ev) {
@@ -165,6 +166,10 @@ angularRoutingApp.controller('mainController', function ($scope, Template, $loca
     $scope.template.emergencyStatus = function (value) {
         $scope.template.emergency = value;
     };
+    
+    $scope.template.notifyStatus = function (value) {
+        $scope.template.notify = value;
+    };
 
     $scope.template.goTo = function (value) {
         $scope.template.menuStatus = initialStatus;
@@ -187,6 +192,7 @@ angularRoutingApp.controller('notifyController', function ($scope, Template) {
     $scope.template.menuStatus = initialStatus;
     $scope.template.finder = initialStatus;
     $scope.template.emergency = initialStatus;
+    $scope.template.notify = initialStatus;
     //</editor-fold>
 });
 
@@ -206,5 +212,6 @@ angularRoutingApp.controller('familyController', function ($scope, Template) {
     $scope.template.menuStatus = initialStatus;
     $scope.template.finder = initialStatus;
     $scope.template.emergency = initialStatus;
+    $scope.template.notify = initialStatus;
     //</editor-fold>
 });

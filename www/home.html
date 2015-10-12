@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/angular-material.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
         <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/materialdesignicons.min.css" media="all" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <title>BPD Conserje</title>
     </head>
@@ -15,9 +16,9 @@
         <div class="main">
             <header>
                 <div class="logo"><img src="img/logo.png"/></div>
-                <div class="emergency" ng-click="template.emergencyStatus('ng-show')"><a href="" id="menuBtn"><i class="fa fa-exclamation-triangle"></i></a></div>
-                <div class="alert"><a href="#notify" id="menuBtn"><i class="fa fa-bell"></i></a></div>
-                <div class="find" ng-click="template.finderStatus('ng-show')"><a href="" id="menuBtn"><i class="fa fa-search"></i></a></div>
+                <div class="emergency" ng-click="template.emergencyStatus('ng-show')"><a href="" id="menuBtn"><i class="mdi mdi-alert"></i></a></div>
+                <div class="alert" ng-click="template.notifyStatus('ng-show')"><a href="" id="menuBtn"><i class="mdi mdi-bell"></i></a></div>
+                <div class="find" ng-click="template.finderStatus('ng-show')"><a href="" id="menuBtn"><i class="mdi mdi-magnify"></i></a></div>
             </header>
             <nav>
                 <div class="menu" ng-click="toggleMenu()">
@@ -26,72 +27,17 @@
                         <i class="fa fa-caret-down"></i>
                     </a>
                 </div>
-                <div class="profile"><i class="fa fa-user fa-2x"></i></div>                
+                <div class="profile"><i class="mdi mdi-account"></i></div>                
             </nav>
             <section id="main">
                 <article>
                     <div ng-view></div>
                 </article>
             </section>            
-            <div class="menu_column {{template.menuStatus}}" ng-include src="'pages/menu.html'">                
-               
-            </div>
-            <div class="finder {{template.finder}}">
-                <div class="header">
-                    <div class="back" ng-click="template.finderStatus('ng-hide')"><i class="fa fa-arrow-left"></i></div>
-                    <div class="field">
-                        <md-content md-theme="docs-dark" layout-padding layout="row" layout-sm="column">
-                            <md-input-container>
-                                <!--<i class="fa fa-search"></i>-->           
-                                <label>Email</label>
-                                <input ng-model="user.email" type="email">
-                            </md-input-container>
-                        </md-content>
-                    </div>
-                </div>
-                <div class="anunTitle">Buscar en Popular App</div>
-            </div>
-            <div class="emergencyContainer {{template.emergency}}">
-                <div class="header">
-                    <div class="back" ng-click="template.emergencyStatus('ng-hide')"><i class="fa fa-arrow-left"></i></div>
-                    <div class="field">Emergencia</div>
-                </div>
-                <div class="emergencyContent">
-                    <div class="btn911"><img src="img/buttons/911.png"></div>
-                    <ul>
-                        <li>
-                            <div class="emergencyBtn">
-                                <img src="img/buttons/ambulacia_boton.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div class="emergencyBtn">
-                                <img src="img/buttons/medica_boton.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div class="emergencyBtn">
-                                <img src="img/buttons/electrica_boton.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div class="emergencyBtn">
-                                <img src="img/buttons/plomeria_boton.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div class="emergencyBtn">
-                                <img src="img/buttons/seguridad_boton.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div class="emergencyBtn">
-                                <img src="img/buttons/vehiculos_boton.png" />
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <div class="menu_column {{template.menuStatus}}" ng-include src="'pages/menu.html'"></div>
+            <div class="finder {{template.finder}}" ng-include src="'pages/finder.html'"></div>
+            <div class="emergencyContainer {{template.emergency}}" ng-include src="'pages/emergency.html'"></div>
+            <div class="notifyContainer {{template.notify}}" ng-include src="'pages/notify.html'"></div>
             <footer></footer>
         </div>
         <!-- Angular Material Dependencies -->
