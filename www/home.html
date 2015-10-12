@@ -34,8 +34,8 @@
                     <div ng-view></div>
                 </article>
             </section>            
-            <div class="menu_column {{template.menuStatus}}" ng-include src="'pages/menu.html'"></div>
-            <div class="finder {{template.finder}}" ng-include src="'pages/finder.html'"></div>
+            <div class="menu_column {{template.menuStatus}}"  ng-include src="'pages/menu.html'"></div>
+            <div class="finder {{template.finder}}" ng-include ng-show="cranes" src="'pages/finder.html'"></div>
             <div class="emergencyContainer {{template.emergency}}" ng-include src="'pages/emergency.html'"></div>
             <div class="notifyContainer {{template.notify}}" ng-include src="'pages/notify.html'"></div>
             <footer></footer>

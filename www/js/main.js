@@ -1,5 +1,5 @@
 // Creación del módulo
-var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute', 'ngMaterial']);
+var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute', 'ngMaterial','ngAnimate']);
 
 
 // Configuración de las rutas
