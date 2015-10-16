@@ -1,6 +1,13 @@
 // Creación del módulo
 var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute', 'ngMaterial', 'ngAnimate']);
 
+angularRoutingApp.directive('backgroundImageDirective', function () {
+    return function ($scope, element, attrs) {
+        element.css({
+            'background-image': 'url(' + $scope.template.picturesrc + ')',
+        });
+    };
+});
 
 // Configuración de las rutas
 angularRoutingApp.config(function ($routeProvider) {
@@ -59,6 +66,7 @@ angularRoutingApp.controller('mainController', function ($scope, Template, $loca
     $scope.template.emergency = false;
     $scope.template.notify = false;
     $scope.template.picture = false;
+    $scope.template.picturesrc = "img/campamento.jpg";
     //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Functions">
@@ -172,6 +180,11 @@ angularRoutingApp.controller('mainController', function ($scope, Template, $loca
     $scope.template.goTo = function (value) {
         $scope.template.menuStatus = false;
         $location.url(value);
+    };
+
+    $scope.template.showPicture = function (picture) {
+        $scope.template.picture = !$scope.template.picture;
+        $('.pictureViewer').css('background-image', 'url(' + picture + ')');
     };
     //</editor-fold>
 

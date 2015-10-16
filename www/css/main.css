@@ -460,6 +460,51 @@ footer {
     min-height:100%;
     background-size:contain;
     background-color: #000;
+    z-index: 998;
+}
+
+.pictureViewer .header,
+.pictureViewer .footer {
+    background-color: rgba(0,0,0,0.5);
+    color: #FFFFFF;    
+    z-index: 999;
+    position: absolute;
+}
+
+.pictureViewer .header {
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 25px;
+    padding: 16px;
+}
+
+.pictureViewer .header .back {
+    float: left;
+    width: 40%;
+    text-align: left;
+}
+
+.pictureViewer .header .controls {
+    float: right;
+    width: 40%;
+    text-align: right;
+}
+
+.pictureViewer .footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.pictureViewer .footer .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pictureViewer .footer .body {
+    
 }
 
 @media only screen and (orientation: landscape) {
