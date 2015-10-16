@@ -322,7 +322,8 @@ footer {
 
 .finder,
 .emergencyContainer,
-.notifyContainer {
+.notifyContainer,
+.pictureViewer {
     position: absolute;
     top: 0;
     right: 0;
@@ -349,6 +350,39 @@ footer {
 .notifyContainer .header div {
     float: left;
     font-size: 20px;
+}
+
+.notifyContainer md-card{
+    padding-left: 16px;
+    position: relative;
+}
+
+.notifyContainer h2{
+    color: #336699;
+    width: 211px;
+    font-size: 12px;
+    position: absolute;
+    top: 6px;
+}
+
+.notifyContainer img{
+    width: 29%;
+    float: right;
+    padding-right: 16px;
+}
+
+.notifyContainer ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.notifyContainer ul li{
+    display: inline-block;
+}
+
+.notifyContainer md-card md-content{
+    font-size: 10px;
+    width: 230px;
 }
 
 .finder .header .back,
@@ -421,20 +455,33 @@ footer {
 }
 
 
+.pictureViewer {
+    background:url('../img/campamento.jpg') no-repeat center center;
+    min-height:100%;
+    background-size:contain;
+    background-color: #000;
+}
+
+@media only screen and (orientation: landscape) {
+    .pictureViewer {
+        background-size:cover;
+    }
+}
+
 /////////////////////////////////////////////////////////////////////////////////
 
 
 .bpd-show-hide {
-  padding:10px;
-  border:1px solid black;
-  background:white;
+    padding:10px;
+    border:1px solid black;
+    background:white;
 }
 
 .bpd-show-hide {
-  -webkit-transition:all linear 0.5s;
-  transition:all linear 0.5s;
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
 }
 
 .bpd-show-hide.ng-hide {
-  opacity:0;
+    opacity:0;
 }

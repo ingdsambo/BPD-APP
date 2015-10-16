@@ -2,7 +2,24 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="BPD Conserje"/>
         <group name="LMS_Project"/>
+        <group>
+            <file>file:/C:/Users/Miguel%20Pineda/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/js/main.js</file>
+            <file>file:/C:/Users/Miguel%20Pineda/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/css/main.css</file>
+            <file>file:/C:/Users/Miguel%20Pineda/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/home.html</file>
+            <file>file:/C:/Users/Miguel%20Pineda/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/pages/notify.html</file>
+        </group>
+        <group name="BPD Conserje">
+            <file>file:/C:/Users/dsambo/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/js/main.js</file>
+            <file>file:/C:/Users/dsambo/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/spec.html</file>
+            <file>file:/C:/Users/dsambo/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/index.html</file>
+            <file>file:/C:/Users/dsambo/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/config.xml</file>
+        </group>
+        <group name="App">
+            <file>file:/C:/Users/dsambo/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/home.html</file>
+            <file>file:/C:/Users/dsambo/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/pages/main.html</file>
+            <file>file:/C:/Users/dsambo/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/pages/menu.html</file>
+            <file>file:/C:/Users/dsambo/Google%20Drive/DMI/Proyectos/Mobile%20First/App/BPD%20Conserje/www/js/main.js</file>
+        </group>
     </open-files>
 </project-private>

@@ -25,10 +25,9 @@ angularRoutingApp.config(function ($routeProvider) {
             .when('/servicios/familia', {
                 templateUrl: 'pages/family.html',
                 controller: 'familyController'
-            })
-            .otherwise({
-                redirectTo: '/home'
-            });
+            }).otherwise({
+        redirectTo: '/home'
+    });
 });
 
 angularRoutingApp.service("Template", function () {
@@ -36,9 +35,10 @@ angularRoutingApp.service("Template", function () {
 });
 
 angularRoutingApp.controller('mainController', function ($scope, Template, $location) {
-    var initialStatus = "ng-hide";
 
     //<editor-fold defaultstate="collapsed" desc="Template">
+    var initialStatus = "ng-hide";
+
     $scope.template = Template;
     $scope.template.title = "Inicio";
     $scope.template.main = "ng-show";
@@ -58,8 +58,10 @@ angularRoutingApp.controller('mainController', function ($scope, Template, $loca
     $scope.template.finder = false;
     $scope.template.emergency = false;
     $scope.template.notify = false;
+    $scope.template.picture = false;
     //</editor-fold>
 
+    //<editor-fold defaultstate="collapsed" desc="Functions">
     $scope.toggleMenu = function (value) {
         if (!value) {
             if ($scope.template.menuStatus === "ng-hide") {
@@ -168,9 +170,11 @@ angularRoutingApp.controller('mainController', function ($scope, Template, $loca
     };
 
     $scope.template.goTo = function (value) {
-        $scope.template.menuStatus = initialStatus;
+        $scope.template.menuStatus = false;
         $location.url(value);
     };
+    //</editor-fold>
+
 });
 
 angularRoutingApp.controller('notifyController', function ($scope, Template) {
@@ -185,6 +189,7 @@ angularRoutingApp.controller('notifyController', function ($scope, Template) {
     $scope.template.house = initialStatus;
     $scope.template.vehicle = initialStatus;
     $scope.template.others = initialStatus;
+    $scope.template.alerts = initialStatus;
     $scope.template.menuStatus = false;
     $scope.template.finder = false;
     $scope.template.emergency = false;
@@ -205,6 +210,7 @@ angularRoutingApp.controller('familyController', function ($scope, Template) {
     $scope.template.house = initialStatus;
     $scope.template.vehicle = initialStatus;
     $scope.template.others = initialStatus;
+    $scope.template.alerts = initialStatus;
     $scope.template.menuStatus = false;
     $scope.template.finder = false;
     $scope.template.emergency = false;
