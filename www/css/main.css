@@ -273,6 +273,10 @@ section ul li a {
     background-color: #F5F5F5;
 }
 
+.menu_column ul li:focus {
+    border: none;
+}
+
 .menu_column .statusIcon {
     float: right;
     box-sizing: border-box;
